@@ -60,11 +60,11 @@ def can_notify(key):
 
 def check_and_notify(stats):
     """Send notifications if thresholds exceeded."""
-    if stats['cpu'] > CPU_LIMIT and can_notify('cpu'):
+    if stats['cpu'] >= CPU_LIMIT and can_notify('cpu'):
         notify("High CPU", f"CPU at {stats['cpu']:.1f}%")
-    if stats['mem'] > MEM_LIMIT and can_notify('mem'):
+    if stats['mem'] >= MEM_LIMIT and can_notify('mem'):
         notify("High Memory", f"Memory at {stats['mem']:.1f}%")
-    if stats['swap'] > SWAP_LIMIT and can_notify('swap'):
+    if stats['swap'] >= SWAP_LIMIT and can_notify('swap'):
         notify("High Swap", f"Swap at {stats['swap']:.1f}%")
 
 
