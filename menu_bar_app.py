@@ -28,11 +28,12 @@ def get_stats():
     }
 
 
-def get_status(value, limit):
+def get_status(value, limit, warn_factor=0.85):
     """Get status label based on value and limit."""
+    warn_threshold = limit * warn_factor
     if value >= limit:
         return "HIGH"
-    if value >= limit - 15:
+    if value >= warn_threshold:
         return "WARN"
     return "OK"
 
