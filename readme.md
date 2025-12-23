@@ -1,4 +1,4 @@
-# Mac Monitor
+# Monarx
 
 A lightweight macOS menu bar application for monitoring CPU, Memory, and Swap usage with native notifications.
 
@@ -17,7 +17,7 @@ A lightweight macOS menu bar application for monitoring CPU, Memory, and Swap us
 ## Installation
 
 ```bash
-cd ~/tools/mac-monitor
+cd ~/tools/Monarx
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -70,8 +70,8 @@ Create `~/Library/LaunchAgents/com.macmonitor.plist`:
     <string>com.macmonitor</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/&lt;username&gt;/tools/mac-monitor/.venv/bin/python</string>
-        <string>/Users/&lt;username&gt;/tools/mac-monitor/menu_bar_app.py</string>
+        <string>/Users/&lt;username&gt;/tools/Monarx/.venv/bin/python</string>
+        <string>/Users/&lt;username&gt;/tools/Monarx/menu_bar_app.py</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
@@ -88,7 +88,7 @@ Unload: `launchctl unload ~/Library/LaunchAgents/com.macmonitor.plist`
 ## Project Structure
 
 ```
-mac-monitor/
+Monarx/
 ├── menu_bar_app.py    # Main application
 ├── config.py          # Configuration
 ├── requirements.txt   # Dependencies
