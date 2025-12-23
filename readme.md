@@ -70,8 +70,8 @@ Create `~/Library/LaunchAgents/com.macmonitor.plist`:
     <string>com.macmonitor</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/YOUR_USERNAME/tools/mac-monitor/.venv/bin/python</string>
-        <string>/Users/YOUR_USERNAME/tools/mac-monitor/menu_bar_app.py</string>
+        <string>/Users/&lt;username&gt;/tools/mac-monitor/.venv/bin/python</string>
+        <string>/Users/&lt;username&gt;/tools/mac-monitor/menu_bar_app.py</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
