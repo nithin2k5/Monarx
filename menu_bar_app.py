@@ -46,7 +46,8 @@ _last_alert = {}
 
 def notify(title, message):
     """Send a macOS notification."""
-    os.system(f"osascript -e 'display notification \"{message}\" with title \"{title}\"'")
+    # Use rumps.notification to avoid shell-based command execution
+    rumps.notification(title, "", message)
 
 
 def can_notify(key):
