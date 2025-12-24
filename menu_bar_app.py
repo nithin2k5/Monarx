@@ -1,9 +1,12 @@
+#!/usr/bin/env python3
+"""Monarx - A lightweight macOS menu bar system monitor."""
+
 import sys
 import os
 
 # Check platform first
 if sys.platform != "darwin":
-    print("Error: Mac Monitor only runs on macOS")
+    print("Error: Monarx only runs on macOS")
     sys.exit(1)
 
 import bootstrap
@@ -70,11 +73,11 @@ def check_and_notify(stats):
 # MENU BAR APP
 
 
-class MacMonitorApp(rumps.App):
+class MonarxApp(rumps.App):
     """Menu bar application for system monitoring."""
     
     def __init__(self):
-        super().__init__(name="Mac Monitor", title="Loading...", quit_button=None)
+        super().__init__(name="Monarx", title="Loading...", quit_button=None)
         self._build_menu()
     
     def _build_menu(self):
@@ -123,7 +126,7 @@ class MacMonitorApp(rumps.App):
     def _refresh(self, _):
         """Manual refresh."""
         self._update(None)
-        rumps.notification("Mac Monitor", "", "Refreshed")
+        rumps.notification("Monarx", "", "Refreshed")
     
     def _quit(self, _):
         """Quit application."""
@@ -131,4 +134,4 @@ class MacMonitorApp(rumps.App):
 
 
 if __name__ == "__main__":
-    MacMonitorApp().run()
+    MonarxApp().run()
