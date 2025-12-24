@@ -9,6 +9,7 @@ if sys.platform != "darwin":
     print("Error: Monarx only runs on macOS")
     sys.exit(1)
 
+import bootstrap
 import rumps
 import psutil
 import time
